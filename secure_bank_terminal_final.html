@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SECURE BANKING OPERATIONS</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+    --green: #a8ffbf;
+    --green-dim: #6f9f82;
+    --amber: #ffcf7a;
+    --bg: #060807;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--green);
+}
+.classification {
+    background: #101513;
+    color: var(--amber);
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #2a3a33;
+}
+.container {
+    width: 980px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #020403;
+    border: 1px solid rgba(168,255,191,0.25);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--green-dim);
+}
+.bank-name {
+    font-size: 14px;
+    color: var(--amber);
+    margin-top: 4px;
+}
+h1 {
+    font-size: 21px;
+    font-weight: 500;
+    margin: 14px 0 6px;
+}
+.subtitle, .meta {
+    font-size: 12px;
+    color: var(--green-dim);
+}
+.meta { margin-bottom: 14px; line-height: 1.6; }
+hr {
+    border: none;
+    border-top: 1px solid rgba(168,255,191,0.25);
+    margin: 18px 0;
+}
+.section-title {
+    font-size: 12px;
+    color: var(--green-dim);
+    margin-bottom: 8px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th, td {
+    padding: 9px 6px;
+    text-align: left;
+}
+th {
+    color: var(--green-dim);
+    border-bottom: 1px solid rgba(168,255,191,0.35);
+}
+td {
+    border-bottom: 1px solid rgba(168,255,191,0.15);
+}
+.footer {
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--green-dim);
+    border-top: 1px solid rgba(168,255,191,0.2);
+    padding-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="classification">
+CONFIDENTIAL — INTERNAL BANKING SYSTEM — AUTHORIZED PERSONNEL ONLY
+</div>
+<div class="container">
+<div class="header">
+<div>SYSTEM: DEFENSE BANKING CORE</div>
+<div id="time"></div>
+</div>
+<div class="bank-name">DEFENSE TREASURY & CENTRAL BANKING AUTHORITY</div>
+<h1>SECURE FINANCIAL OPERATIONS REPORT</h1>
+<div class="subtitle">Government Accounts Division</div>
+<div class="meta">
+BRANCH: Capital Region Operations Center<br>
+CLEARANCE LEVEL: 4 (READ ONLY)
+</div>
+<hr>
+<div class="section-title">ACCOUNT LEDGER SUMMARY</div>
+<table>
+<thead>
+<tr>
+<th>ACCOUNT HOLDER</th>
+<th>DOB</th>
+<th>ACCOUNT ID</th>
+<th>UID</th>
+<th>BALANCE</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Brian McCombs</td><td>1971-11-03</td><td>12055670444</td><td>005172</td><td>$936,532.00</td></tr>
+<tr><td>Jane Smith</td><td>1985-08-15</td><td>76543210987</td><td>005173</td><td>$842,100.00</td></tr>
+<tr><td>Alex Johnson</td><td>1980-04-22</td><td>46573829101</td><td>005174</td><td>$658,740.00</td></tr>
+</tbody>
+</table>
+<div class="footer">
+This document is generated from a secure internal banking system.
+</div>
+</div>
+<script>
+function updateTime() {
+    const d = new Date();
+    document.getElementById("time").textContent =
+        d.getFullYear() + "-" +
+        String(d.getMonth()+1).padStart(2,'0') + "-" +
+        String(d.getDate()).padStart(2,'0') + " " +
+        String(d.getHours()).padStart(2,'0') + ":" +
+        String(d.getMinutes()).padStart(2,'0') + ":" +
+        String(d.getSeconds()).padStart(2,'0');
+}
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
